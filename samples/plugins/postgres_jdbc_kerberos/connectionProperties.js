@@ -6,8 +6,8 @@
     var props = [];
 
     // integrated auth
-    if (attr[connectionHelper.attributeAuthentication] == "auth-integrated") {
-	    var str = attr[":tableau-server-user"];
+    if (attr[connectionHelper.attributeAuthentication] == connectionHelper.valueAuthIntegrated) {
+	    var str = attr[connectionHelper.attributeTableauServerUser];
         // properties for kerberos on Tableau Server 	    
 	    if (!isEmpty(str)) {
             props["user"] = str;
@@ -21,7 +21,7 @@
         }            
                   
     // username-password auth     
-    } else if (attr[connectionHelper.attributeAuthentication] == "username-password"){
+    } else if (attr[connectionHelper.attributeAuthentication] == connectionHelper.valueAuthUserPass){
         props["user"] = attr[connectionHelper.attributeUsername];
         props["password"] = attr[connectionHelper.attributePassword];
     }   
