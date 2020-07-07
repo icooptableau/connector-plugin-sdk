@@ -6,7 +6,7 @@
 ### Changed
 ### Removed
 
-## 2020-06-10
+## 2020-07-07
 ### Added
 - Changed sqlite_extract\dialect.xml, make it doesn't inherit from any base dialect
 
